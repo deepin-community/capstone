@@ -1,0 +1,74 @@
+Source: capstone
+Priority: optional
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Uploaders: Pranith Kumar <bobby.prani@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+               python3-all-dev,
+               python3-setuptools,
+               cython3,
+Standards-Version: 4.5.0
+Section: devel
+Homepage: https://www.capstone-engine.org/
+Vcs-Git: https://salsa.debian.org/pkg-security-team/capstone.git
+Vcs-Browser: https://salsa.debian.org/pkg-security-team/capstone
+
+Package: libcapstone-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libcapstone4 (= ${binary:Version}), ${misc:Depends}
+Description: lightweight multi-architecture disassembly framework - devel files
+ Capstone is a lightweight multi-platform, multi-architecture disassembly
+ framework.
+ .
+ These are the development headers and libraries.
+
+Package: libcapstone4
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lightweight multi-architecture disassembly framework - library
+ Capstone is a lightweight multi-platform, multi-architecture disassembly
+ framework.
+ .
+ Features:
+  - Support hardware architectures: ARM, ARM64 (aka ARMv8), Mips, PowerPC &
+ Intel.
+  - Clean/simple/lightweight/intuitive architecture-neutral API.
+  - Provide details on disassembled instructions (called "decomposer" by some
+ others).
+  - Provide some semantics of the disassembled instruction, such as list of
+ implicit registers read & written.
+  - Implemented in pure C language, with bindings for Java, OCaml and Python
+ ready to use and Ruby, C#, GO & Vala available on git repos.
+  - Native support for Windows & *nix (with OS X, Linux, *BSD & Solaris
+ confirmed).
+  - Thread-safe by design.
+  - Special support for embedding into firmware or OS kernel.
+  - Distributed under the open source BSD license.
+
+Package: capstone-tool
+Section: utils
+Architecture: any
+Multi-Arch: allowed
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lightweight multi-architecture disassembly framework - command line tool
+ Capstone is a lightweight multi-platform, multi-architecture disassembly
+ framework.
+ .
+ This package contains cstool, a command-line tool to disassemble
+ hexadecimal strings.
+
+Package: python3-capstone
+Section: python
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}, libcapstone4,
+ python3-distutils
+XB-Python3-Version: ${python:Versions}
+Description: lightweight multi-architecture disassembly framework - Python bindings
+ Capstone is a lightweight multi-platform, multi-architecture disassembly
+ framework.
+ .
+ These are the Python 3 bindings.

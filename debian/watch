@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/-rc/~rc/" \
+    https://github.com/aquynh/capstone/releases .*/archive/(4\..*)\.tar\.gz
