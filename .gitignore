@@ -79,7 +79,6 @@ suite/regress/invalid_read_in_print_operand
 capstone.pc
 
 # local files
-_*
 
 # freebsd ports: generated file with "make makesum" command
 packages/freebsd/ports/devel/capstone/distinfo
