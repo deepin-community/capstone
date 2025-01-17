@@ -3,6 +3,7 @@
 
 include /usr/share/dpkg/architecture.mk
 
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all,+bindnow
 export MAKEFLAGS := V=1
 
 %:
@@ -18,9 +19,6 @@ override_dh_auto_install:
 	$(patsubst override_%,%,$@) --sourcedirectory=bindings/python --buildsystem=pybuild
 
 override_dh_auto_test: export LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):$(CURDIR)/tests
-
-override_dh_missing:
-	dh_missing --fail-missing
 
 override_dh_install:
 	dh_install -Xdist-packages/capstone/lib
