@@ -1,8 +1,57 @@
-capstone (4.0.2-3-deepin1) unstable; urgency=medium
+capstone (5.0.3-1) unstable; urgency=medium
 
-  * Rebuild
+  * Team upload.
+  * New upstream version 5.0.3
+  * Rebase patches
+  * Remove python3-distutils dependency
 
- -- Deepin Packages Builder <packages@deepin.org>  Thu, 24 Nov 2022 07:23:00 +0800
+ -- Hilko Bengen <bengen@debian.org>  Sun, 29 Dec 2024 10:47:28 +0100
+
+capstone (5.0.1-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.0.1
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 23 Aug 2023 10:19:22 +0200
+
+capstone (5.0-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.0
+  * Update watch file
+  * Bump Standards-Version
+  * Rename lib package due to SONAME bump
+  * Update docs file
+  * Update patches
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 06 Jul 2023 16:07:06 +0200
+
+capstone (4.0.2-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Remove vestigial distutils.sysconfig import (Closes: #1059671)
+
+ -- Timo Röhling <roehling@debian.org>  Tue, 20 Feb 2024 21:30:13 +0100
+
+capstone (4.0.2-5) unstable; urgency=medium
+
+  * Team upload.
+  * Remove root build requirement
+  * Add bindnow hardening flag
+  * Bring back hardening patch since dpkg-buildflags puts -DFORTIFY_SOURCE into
+    CPPFLAGS
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 25 Dec 2021 17:44:03 +0100
+
+capstone (4.0.2-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to make make build independent of filesystem order
+  * Update debian/watch URL
+  * Set harding flags via environment variable, drop patch
+  * Bump Debhelper compat version
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 25 Dec 2021 15:08:52 +0100
 
 capstone (4.0.2-3) unstable; urgency=medium
 

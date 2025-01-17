@@ -1,2 +1,2 @@
-0001-Remove-magic-for-loading-shared-libraries.patch
-Add-hardening-flag.patch
+Remove-magic-for-loading-shared-libraries.patch
+Enforce-order-on-wildcard-operations-for-reproducible-bui.patch
